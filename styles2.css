@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(img/welcome.jpg);
+    background-size: 99%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f0f0f0;
+    width: 99%;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.welcome-section {
+    text-align: center;
+}
+
+.welcome-section h1 {
+    color: #ffffff;
+    font-size: 32px;
+}
+
+.welcome-section p {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.rounded-button {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

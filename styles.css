@@ -1,0 +1,98 @@
+/* Estilos para el encabezado */
+header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para los enlaces de redes sociales */
+.redes-sociales {
+    display: flex;
+  }
+
+  .redes-sociales a {
+    color: white;
+    margin-left: 10px;
+  }
+
+  /* Alinear los enlaces a la derecha */
+  .redes-sociales {
+    margin-left: auto;
+  }
+  #audio-container {
+    text-align: center; /* Centrar el contenido horizontalmente */
+    flex-grow: 1; /* Hacer que el contenedor ocupe el espacio restante */
+  }
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+body{
+    background-image: url(img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Estilos para la sección de reseña */
+#reseña {
+    text-align: center;
+    padding: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: grey;
+    opacity: 80%;
+
+}
+
+
+/* Estilos para la sección de videos */
+#videos {
+    text-align: center;
+}
+
+#videos h2 {
+    color: #000000;
+    font-size: 24px;
+}
+
+#videos .video-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    align-self: baseline;
+    align-items: center;
+}
+
+#videos .video-wrapper iframe {
+    margin: 10px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.redes-sociales{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.boton-flotante {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    z-index: 1000;
+  }
