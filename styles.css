@@ -96,3 +96,41 @@ footer {
     right: 20px;
     z-index: 1000;
   }
+
+  .carousel-item img {
+    height: 700px; /* Ajusta esta altura según tus necesidades */
+    object-fit: cover; /* Esto garantiza que las imágenes se recorten correctamente */
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    /* Estilos para el encabezado */
+    header {
+        text-align: center;
+    }
+
+    /* Estilos para la sección de reseña */
+    #reseña {
+        text-align: center;
+    }
+
+    #reseña > div {
+        column-count: 1; /* Cambia a una sola columna */
+        column-gap: 0; /* Elimina el espacio entre columnas */
+    }
+
+    /* Estilos para el carrusel */
+    #miCarrusel {
+        max-width: 100%; /* Ajusta el ancho máximo del carrusel */
+    }
+
+    #miCarrusel img {
+        width: 100%; /* Ajusta el ancho de las imágenes del carrusel */
+    }
+
+    /* Estilos para el botón de descarga de la aplicación */
+    .boton-flotante {
+        display: block;
+        margin: 20px auto;
+    }
+}

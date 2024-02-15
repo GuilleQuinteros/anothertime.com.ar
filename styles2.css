@@ -4,11 +4,9 @@ body {
     align-items: center;
     height: 100vh;
     background-image: url(img/welcome.jpg);
-    background-size: 99%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #f0f0f0;
-    width: 99%;
+    background-color: #000000;
     position: relative;
     background-attachment: fixed;
 }
@@ -35,4 +33,11 @@ body {
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* Cambia el tamaño de la imagen para que se ajuste */
+        background-position: center; /* Centra la imagen en dispositivos móviles */
+    }
 }
