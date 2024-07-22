@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Audio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .audio-player {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+        }
+        .audio-controls {
+            display: flex;
+            align-items: center;
+        }
+        .play-button {
+            margin-right: 10px;
+        }
+        .progress-bar {
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="audio-player">
+        <button id="playButton" class="btn btn-primary play-button">Play</button>
+        <input type="range" id="progressBar" class="progress-bar" value="0" max="100">
+        <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+    </div>
+    <audio id="audio" src="ruta_a_tu_audio.mp3"></audio>
+</div>
+
+<script>
+    const audio = document.getElementById('audio');
+    const playButton = document.getElementById('playButton');
+    const progressBar = document.getElementById('progressBar');
+    const currentTime = document.getElementById('currentTime');
+    const duration = document.getElementById('duration');
+
+    playButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playButton.textContent = 'Pause';
+        } else {
+            audio.pause();
+            playButton.textContent = 'Play';
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        const current = audio.currentTime;
+        const total = audio.duration;
+        progressBar.value = (current / total) * 100;
+        currentTime.textContent = formatTime(current);
+        duration.textContent = formatTime(total);
+    });
+
+    progressBar.addEventListener('input', () => {
+        const value = progressBar.value;
+        audio.currentTime = (value / 100) * audio.duration;
+    });
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+</script>
+
+</body>
+</html>

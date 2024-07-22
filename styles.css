@@ -1,134 +1,150 @@
 /* Estilos para el encabezado */
 header {
-    text-align: center;
     background-color: #333;
-    color: #fff;
+    color: #424040;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
+/* Estilos para el logo en el encabezado */
+.logo {
+    max-height: 150px; /* Ajusta la altura máxima del logo */
+    margin-right: 30px; /* Espacio entre el logo y el título */
+}
 /* Estilos para los enlaces de redes sociales */
 .redes-sociales {
     display: flex;
-  }
+    align-items: center;
+}
 
-  .redes-sociales a {
+.redes-sociales a {
     color: white;
     margin-left: 10px;
-  }
-
-  /* Alinear los enlaces a la derecha */
-  .redes-sociales {
-    margin-left: auto;
-  }
-  #audio-container {
-    text-align: center; /* Centrar el contenido horizontalmente */
-    flex-grow: 1; /* Hacer que el contenedor ocupe el espacio restante */
-  }
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
 }
-body{
-    background-image: url(img/fondo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+
+/* Estilos para el contenedor de audio */
+#audio-container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.play-button {
+    margin-right: 10px;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#currentTime, #duration {
+    font-size: 14px;
+}
+
+/* Estilos generales */
+body {
+    background-color: #0B0140;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-/* Estilos para la sección de reseña */
-#reseña {
-    text-align: center;
-    padding: 30px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: grey;
-    opacity: 80%;
 
-}
-
-
-/* Estilos para la sección de videos */
-#videos {
-    text-align: center;
-}
-
-#videos h2 {
-    color: #000000;
+h2 {
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
-#videos .video-wrapper {
+section#reseña {
+    position: relative;
+    background: url('img/onda.png') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    max-height: 400px;
+    text-align: center;
+    color: white;
+}
+
+section #reseña .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: center;
-    flex-direction: row;
-    align-self: baseline;
     align-items: center;
-}
-
-#videos .video-wrapper iframe {
-    margin: 10px;
 }
 
 /* Estilos para el pie de página */
 footer {
-    text-align: center;
     background-color: #333;
     color: #fff;
     padding: 20px;
+    margin-top: 20px;
 }
 
-.redes-sociales{
+footer a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+footer .redes-sociales {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
-    flex-direction: row;
+    margin-top: 10px;
 }
 
-.boton-flotante {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    z-index: 1000;
-  }
+footer .redes-sociales a {
+    margin: 0 10px; /* Espacio entre los íconos */
+}
 
-  .carousel-item img {
-    height: 700px; /* Ajusta esta altura según tus necesidades */
-    object-fit: cover; /* Esto garantiza que las imágenes se recorten correctamente */
+footer .social-icon {
+    width: 34px; /* Ajusta el tamaño del ícono */
+    height: 34px; /* Ajusta el tamaño del ícono */
+    transition: opacity 0.3s; /* Transición para el hover */
+}
+
+footer .social-icon:hover {
+    opacity: 0.8; /* Efecto de opacidad al pasar el mouse */
+}
+
+
+
+/* Estilos para las tarjetas de noticias */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
-    /* Estilos para el encabezado */
     header {
-        text-align: center;
+        flex-direction: column;
     }
 
-    /* Estilos para la sección de reseña */
     #reseña {
         text-align: center;
     }
 
-    #reseña > div {
-        column-count: 1; /* Cambia a una sola columna */
-        column-gap: 0; /* Elimina el espacio entre columnas */
-    }
-
-    /* Estilos para el carrusel */
-    #miCarrusel {
-        max-width: 100%; /* Ajusta el ancho máximo del carrusel */
-    }
-
-    #miCarrusel img {
-        width: 100%; /* Ajusta el ancho de las imágenes del carrusel */
-    }
-
-    /* Estilos para el botón de descarga de la aplicación */
     .boton-flotante {
         display: block;
         margin: 20px auto;
